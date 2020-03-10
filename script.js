@@ -7,26 +7,33 @@
 // ****************************COUNTDOWN TIMER ELEMENT************************
 //added timer feature
 var timeEl = document.querySelector("#time");
+var startButtonEl = document.getElementById("btn btn-primary btn-lg")
 var mainEl = document.getElementById("main");
 
-var secondsLeft = 76;
 
+
+startButtonEl.addEventListener("click", function(){
+   console.log ("you clicked me") 
+    setTime()
+});
+
+var secondsLeft = 76;
 
 function setTime() {
   var timerInterval = setInterval(function() {
     secondsLeft--;
-    timeEl.textContent = secondsLeft
+    timeEl.textContent = "TIME:  " + secondsLeft
     if(secondsLeft === 0) {
       clearInterval(timerInterval);
     
-    }
+    };
     console.log(secondsLeft)
   }, 1000);
 
 }
+// setTime();
 
 
-setTime();
 
 
 
