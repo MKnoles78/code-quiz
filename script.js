@@ -67,11 +67,11 @@ function setTime() {
 
 // The array of questions for our quiz game.
 // var questions = [
-//     { q: "The sky is blue.", a: "t" },
-//     { q: "There are 365 days in a year.", a: "t" },
-//     { q: "There are 42 ounces in a pound.", a: "f" },
-//     { q: "The Declaration of Independence was created in 1745.", a: "f" },
-//     { q: "Bananas are vegetables.", a: "f" }
+//     { q: "What is Batman's real identity?", a: "t" },
+//     { q: "In what town does Batman reside?", a: "t" },
+//     { q: "What is the Riddler's read identity?", a: "f" },
+//     { q: "Which of these individual never held the codename Robin?", a: "f" },
+//     { q: "In what year did Batman first appear?", a: "f" }
 //   ];
 
 //   // We start the game with a score of 0.

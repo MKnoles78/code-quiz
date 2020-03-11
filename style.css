@@ -4,6 +4,32 @@
 
 };
 
-ol, li {
-    background-color: blue;
+#btn btn-primary btn-lg {
+    text-align: center;
+    
+}
+
+
+
+#btn-a, #btn-b, #btn-c, #btn-d {
+    background-color: purple;
+    width: 250px;
+    height: 25px;
+    border: 2px solid grey;
+
+}
+
+#btn-a:hover, #btn-b:hover, #btn-c:hover, #btn-d:hover{
+    background-color: rgb(221, 29, 221);
+    width: 250px;
+    height: 25px;
+    border: 2px solid grey;
+}
+#btn-a:focus, #btn-b:focus, #btn-c:focus, #btn-d:focus {
+    outline: 0px;
+}
+
+#questionblock {
+    text-align: center;
+        
 }
