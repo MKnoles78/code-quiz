@@ -254,90 +254,92 @@ function setTime() {
 
 // **************************CREATING LIST FOR HIGHSCORES AND STORING TO LOCAL************************
 
-// var todoInput = document.querySelector("#todo-text");
-// var todoForm = document.querySelector("#todo-form");
-// var todoList = document.querySelector("#todo-list");
-// var todoCountSpan = document.querySelector("#todo-count");
+var highscoreInput = document.querySelector("#highscore-text");
+var highscoreForm = document.querySelector("#highscore-form");
+var highscoreList = document.querySelector("#highscore-list");
+var highscoreCountSpan = document.querySelector("#highscore-count");
 
-// var todos = [];
+var highscores = [];
 
-// init();
+init();
 
-// function renderTodos() {
-//   // Clear todoList element and update todoCountSpan
-//   todoList.innerHTML = "";
-//   todoCountSpan.textContent = todos.length;
+function renderhighscores() {
+  // Clear highscoreList element and update highscoreCountSpan
+  highscoreList.innerHTML = "";
+  highscoreCountSpan.textContent = highscores.length;
 
-//   // Render a new li for each todo
-//   for (var i = 0; i < todos.length; i++) {
-//     var todo = todos[i];
+  // Render a new li for each highscore
+  for (var i = 0; i < highscores.length; i++) {
+    var highscore = highscores[i];
 
-//     var li = document.createElement("li");
-//     li.textContent = todo;
-//     li.setAttribute("data-index", i);
+    var li = document.createElement("li");
+    li.textContent = highscore;
+    li.setAttribute("data-index", i);
 
-//     var button = document.createElement("button");
-//     button.textContent = "Complete";
+    // var button = document.createElement("button");
+    // button.textContent = "Complete";
 
-//     li.appendChild(button);
-//     todoList.appendChild(li);
-//   }
-// }
+    // li.appendChild(button);
+    highscoreList.appendChild(li);
+  }
 
-// function init() {
-//   // Get stored todos from localStorage
-//   // Parsing the JSON string to an object
-//   var storedTodos = JSON.parse(localStorage.getItem("todos"));
+}
 
-//   // If todos were retrieved from localStorage, update the todos array to it
-//   if (storedTodos !== null) {
-//     todos = storedTodos;
-//   }
+function init() {
+  // Get stored highscores from localStorage
+  // Parsing the JSON string to an object
+  var storedhighscores = JSON.parse(localStorage.getItem("highscores"));
 
-//   // Render todos to the DOM
-//   renderTodos();
-// }
+  // If highscores were retrieved from localStorage, update the highscores array to it
+  if (storedhighscores !== null) {
+    highscores = storedhighscores;
+  }
 
-// function storeTodos() {
-//   // Stringify and set "todos" key in localStorage to todos array
-//   localStorage.setItem("todos", JSON.stringify(todos));
-// }
+  // Render highscores to the DOM
+  renderhighscores();
+}
 
-// // When form is submitted...
-// todoForm.addEventListener("submit", function(event) {
-//   event.preventDefault();
+function storehighscores() {
+  // Stringify and set "highscores" key in localStorage to highscores array
+  localStorage.setItem("highscores", JSON.stringify(highscores));
+}
 
-//   var todoText = todoInput.value.trim();
+// When form is submitted...
+highscoreForm.addEventListener("submit", function(event) {
+  event.preventDefault();
 
-//   // Return from function early if submitted todoText is blank
-//   if (todoText === "") {
-//     return;
-//   }
+  var highscoreText = highscoreInput.value.trim();
 
-//   // Add new todoText to todos array, clear the input
-//   todos.push(todoText);
-//   todoInput.value = "";
+  // Return from function early if submitted highscoreText is blank
+  if (highscoreText === "") {
+    return;
+  }
 
-//   // Store updated todos in localStorage, re-render the list
-//   storeTodos();
-//   renderTodos();
-// });
+  // Add new highscoreText to highscores array, clear the input
+  highscores.push(highscoreText);
+  highscoreInput.value = "";
 
-// // When a element inside of the todoList is clicked...
-// todoList.addEventListener("click", function(event) {
-//   var element = event.target;
+  // Store updated highscores in localStorage, re-render the list
+  storehighscores();
+  renderhighscores();
+});
 
-//   // If that element is a button...
-//   if (element.matches("button") === true) {
-//     // Get its data-index value and remove the todo element from the list
-//     var index = element.parentElement.getAttribute("data-index");
-//     todos.splice(index, 1);
+// When a element inside of the highscoreList is clicked...
+highscoreList.addEventListener("click", function(event) {
+  var element = event.target;
 
-//     // Store updated todos in localStorage, re-render the list
-//     storeTodos();
-//     renderTodos();
-//   }
-// });
+  // If that element is a button...
+  if (element.matches("button") === true) {
+    // Get its data-index value and remove the highscore element from the list
+    var index = element.parentElement.getAttribute("data-index");
+    highscores.splice(index, 1);
+
+    // Store updated highscores in localStorage, re-render the list
+    storehighscores();
+    renderhighscores();
+  }
+});
+
 
 
 // ******************************USING JSON TO STORE STRING ELEMENTS**********************************

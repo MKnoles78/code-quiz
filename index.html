@@ -13,18 +13,30 @@
 
         <nav class="navbar navbar-light bg-light">
             <span class="navbar-text">
-              Highscores
+              View Highscores (this needs to be a link to highscores list)
             </span>
             <span id="time" style="color: black;"></span>
             
           </nav>
         <h2 id="quiz-heading" style="text-align: center;">Coding Quiz Challenge</h2>
-        <p style="text-align: center;">paragraph</p>
+        <p style="text-align: center;">Riddle me this...</p>
         <div style="text-align: center;">
         <button type="button" id="btn btn-primary btn-lg">Submit</button>
         </div>
 
         <main>
+            <div class="highscores">
+                <form id="highscore-form" method="POST">
+                <label for="highscore-text">Add a highscore:</label>
+                <input type="text" placeholder="Enter your Initials" name="highscore-text" id="highscore-text" />
+                </form>
+                <input class="btn btn-primary" type="goback" value="Go Back">
+                <input class="btn btn-primary" type="clear" value="Clear Highscores">
+                
+                <p>highscore Count: <span id="highscore-count">0</span></p>
+                
+                <ol id="highscore-list"></ol>
+            </div>
 
         </main>
         
