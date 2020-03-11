@@ -1,0 +1,9 @@
+#highscores {
+    text-align: center;
+    margin-top: 40em;
+
+};
+
+ol, li {
+    background-color: blue;
+}

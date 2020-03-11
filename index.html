@@ -7,13 +7,13 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
 
         <nav class="navbar navbar-light bg-light">
             <span class="navbar-text">
-              View Highscores (this needs to be a link to highscores list)
+                <a href="#highscores">View Highscores (this needs to be a link to highscores list)</a>
             </span>
             <span id="time" style="color: black;"></span>
             
@@ -25,7 +25,7 @@
         </div>
 
         <main>
-            <div class="highscores">
+            <div id ="highscores">
                 <form id="highscore-form" method="POST">
                 <label for="highscore-text">Add a highscore:</label>
                 <input type="text" placeholder="Enter your Initials" name="highscore-text" id="highscore-text" />
