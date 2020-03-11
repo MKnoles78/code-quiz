@@ -10,13 +10,23 @@ var timeEl = document.querySelector("#time");
 var startButtonEl = document.getElementById("btn btn-primary btn-lg")
 var mainEl = document.getElementById("main");
 var headingEl = document.getElementById("heading");
+var questionBlockEl = document.getElementById("questionblock")
+
 
 
 startButtonEl.addEventListener("click", function(){
    console.log ("you clicked me") 
     setTime()
     headingEl.style.display = "none";
-
+    
+    // this line changes display of the questionblock from none to block, hides and shows 
+    var x = document.getElementById("questionblock");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+    
 });
 
 var secondsLeft = 76;
@@ -254,10 +264,8 @@ function setTime() {
 var highscoreInput = document.querySelector("#highscore-text");
 var highscoreForm = document.querySelector("#highscore-form");
 var highscoreList = document.querySelector("#highscore-list");
-var highscoreCountSpan = document.querySelector("#highscore-count");
-var 
+var highscoreCountSpan = document.querySelector("#highscore-count");  
 
-var highscores = [];
 
 init();
 
@@ -274,9 +282,10 @@ function renderhighscores() {
     li.textContent = highscore;
     li.setAttribute("data-index", i);
 
-    // var button = document.createElement("button");
+    // ********THESE TWO LINES ADDED THE COMPLETE BUTTON ON THE ASSIGNMENT, SHOULD NOT NEED******** 
+    // var button = document.createElement("button"); 
     // button.textContent = "Complete";
-
+    // ***********THIS LINE ADDED OR APPENDED THE BUTTON TO THE TAG, SHOULD NOT NEED*********  
     // li.appendChild(button);
     highscoreList.appendChild(li);
   }
