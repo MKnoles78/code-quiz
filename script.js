@@ -9,12 +9,14 @@
 var timeEl = document.querySelector("#time");
 var startButtonEl = document.getElementById("btn btn-primary btn-lg")
 var mainEl = document.getElementById("main");
-
+var headingEl = document.getElementById("heading");
 
 
 startButtonEl.addEventListener("click", function(){
    console.log ("you clicked me") 
     setTime()
+    headingEl.style.display = "none";
+
 });
 
 var secondsLeft = 76;
@@ -31,11 +33,6 @@ function setTime() {
   }, 1000);
 
 }
-// setTime();
-
-
-
-
 
 // link timer to start button
 
@@ -258,6 +255,7 @@ var highscoreInput = document.querySelector("#highscore-text");
 var highscoreForm = document.querySelector("#highscore-form");
 var highscoreList = document.querySelector("#highscore-list");
 var highscoreCountSpan = document.querySelector("#highscore-count");
+var 
 
 var highscores = [];
 

@@ -16,13 +16,14 @@
                 <a href="#highscores">View Highscores</a>
             </span>
             <span id="time" style="color: black;"></span>
-            
-          </nav>
-        <h2 id="quiz-heading" style="text-align: center;">Coding Quiz Challenge</h2>
-        <p id="question" style="text-align: center;">Riddle me this...  </p>
-        <div style="text-align: center;">
-        <button id="btn btn-primary btn-lg">Submit</button>
-        </div> <br> 
+        </nav>
+        <div id="heading">
+            <h2 id="quiz-heading" style="text-align: center;">Coding Quiz Challenge</h2>
+            <p id="question" style="text-align: center;">Riddle me this...  </p>
+            <div style="text-align: center;">
+            <button id="btn btn-primary btn-lg">Submit</button>
+            </div> <br> 
+        </div>
 
         <div id="questionblock">
             <p>question</p>
@@ -41,8 +42,8 @@
                 <label for="highscore-text">Add a highscore:</label>
                 <input type="text" placeholder="Enter your Initials" name="highscore-text" id="highscore-text" />
                 </form>
-                <input class="btn btn-primary" type="goback" value="Go Back">
-                <input class="btn btn-primary" type="clear" value="Clear Highscores">
+                <input id="go-back" class="btn btn-primary" type="goback" value="Go Back">
+                <input id ="clearhigh" class="btn btn-primary" type="clear" value="Clear Highscores">
                 
                 <p>highscore Count: <span id="highscore-count">0</span></p>
                 
