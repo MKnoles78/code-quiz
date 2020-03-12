@@ -10,12 +10,15 @@
 }
 
 
-
 #btn-a, #btn-b, #btn-c, #btn-d {
     background-color: purple;
     width: 250px;
     height: 25px;
     border: 2px solid grey;
+    color: white;
+    
+    
+    
 
 }
 
@@ -33,4 +36,13 @@
     text-align: center;
     
         
+}
+
+#question{
+    padding: auto;
+    margin: auto; 
+}
+
+#highscore-form {
+    margin-top: 200px;
 }

@@ -17,25 +17,26 @@
             </span>
             <span id="time" style="color: black;"></span>
         </nav>
-        <div id="heading">
+        <container id="heading">
             <h2 id="quiz-heading" style="text-align: center;">Coding Quiz Challenge</h2>
-            <p id="question" style="text-align: center;">Riddle me this...  </p>
+            <p id="question" style="text-align: center;">The Riddler has escaped Arkham Asylum and has hidden a bomb in Gotham.  Help Batman solve these riddles before the timer runs out.  Every wrong answer takes time away.  Good Luck
+            !</p>
             <div style="text-align: center;">
             <button id="btn btn-primary btn-lg">Submit</button>
             </div> <br> 
-        </div>
+        </container>
 
-        <div id="questionblock" style="display: none;">
-            <p>question</p>
+        <container id="questionblock" style="display: none;">
+            <p id="display-question"></p>
             <button id="btn-a"><span id="choice-a"></span></button><br>
-            <button id="btn-b"><span id="choice-a"></span></button><br>
-            <button id="btn-c"><span id="choice-a"></span></button><br>
-            <button id="btn-d"><span id="choice-a"></span></button><br>   
-        <div>
+            <button id="btn-b"><span id="choice-b"></span></button><br>
+            <button id="btn-c"><span id="choice-c"></span></button><br>
+            <button id="btn-d"><span id="choice-d"></span></button><br>   
+        <container>
         
 
         <!-- *******NEED TO FIX IT SO HIGHSCORES DOESN'T DISAPPEAR WHEN SUBMIT IS PRESSED********  -->
-        <div id ="highscores">
+        <container id ="highscores" style="display: block;">
             <form id="highscore-form" method="POST">
             <label for="highscore-text">Add a highscore:</label>
             <input type="text" placeholder="Enter your Initials" name="highscore-text" id="highscore-text" />
@@ -46,7 +47,7 @@
             <p>highscore Count: <span id="highscore-count">0</span></p>
             
             <ol id="highscore-list"></ol>
-        </div>
+        </container>
 
         
         

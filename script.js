@@ -26,6 +26,8 @@ startButtonEl.addEventListener("click", function(){
     } else {
       x.style.display = "none";
     }
+
+
     
 });
 
@@ -48,6 +50,92 @@ function setTime() {
 
 
 // ********************************ONCLICK EVENT TO START QUESTIONS*****************************
+var displayQuestionEl = document.getElementById("display-question");
+var choiceAEl= document.getElementById("choice-a");
+var choiceBEl= document.getElementById("choice-b");
+var choiceCEl= document.getElementById("choice-c");
+var choiceDEl= document.getElementById("choice-d");
+
+// questions  
+
+var questions = [
+  {
+    displayQuestionEl : "I have branches, but no fruit, trunk or leaves. What am I?",
+      choiceAEl : "A Bank",
+      choiceBEl : "Swimming Pool",
+      choiceCEl : "Restaurant",
+      choiceDEl : "Parking Garage",
+      correct : "A"
+  },{
+    displayQuestionEl : "I follow you all the time and copy your every move, but you can't touch me or catch me. What am I?",
+      choiceAEl: "Best Friend",
+      choiceBEl : "Your Shadow",
+      choiceCEl : "Pet",
+      choiceDEl : "Reflection",
+      correct : "B"
+  },{
+    displayQuestionEl : "If you've got me, you want to share me; if you share me, you haven't kept me.  What am I?",
+      choiceAEl : "Money",
+      choiceBEl : "Attitude",
+      choiceCEl : "A Secret",
+      choiceDEl : "Lunch",
+      correct : "C"
+  },{
+    displayQuestionEl : "What has hands, but can't clap?",
+    choiceAEl : "A Clock",
+    choiceBEl : "Handyman",
+    choiceCEl : "Leftovers",
+    choiceDEl : "A handkerchief",
+    correct : "A"
+},{
+  displayQuestionEl : "What building has the most stories?",
+    choiceAEl : "Empire State Building",
+    choiceBEl : "Wayne Tower",
+    choiceCEl : "The Library",
+    choiceDEl : "Daily Planet",
+    correct : "C"
+},
+];
+
+var lastQuestion = questions.length - 1;
+var score = 0;
+
+var questionOne = questions[0].displayQuestionEl;
+var questionTwo = questions[1].displayQuestionEl;
+var questionThree = questions[2].displayQuestionEl;
+var questionFour = questions[3].displayQuestionEl;
+var questionFive = questions[4].displayQuestionEl;
+var optionOne = questions[0].choiceAEl
+var optionTwo = questions[1].choiceBEl
+var optionThree = questions[2].choiceCEl
+var optionFour = questions[3].choiceDEl
+
+
+
+displayQuestionEl.innerHTML += questionOne
+choiceAEl.innerHTML += optionOne
+choiceBEl.innerHTML += optionTwo
+choiceCEl.innerHTML += optionThree
+choiceDEl.innerHTML += optionFour
+
+
+
+
+// function showQuestions (){
+// score++
+// for (i = 0; i < questions.length; i++) {
+
+
+  
+// }
+// }
+
+
+
+
+
+
+// *************************** 
 
 // var themeSwitcher = document.querySelector("#theme-switcher");
 // var container = document.querySelector(".container");
@@ -69,40 +157,6 @@ function setTime() {
 // WHEN I answer a question incorrectly
 // THEN time is subtracted from the clock
 // WHEN all questions are answered or the timer reaches 0
-
-// **************************************QUESTION GENERATION**************************************
-
-// The array of questions for our quiz game.
-// var questions = [
-//     { q: "What is Batman's real identity?", a: "t" },
-//     { q: "In what town does Batman reside?", a: "t" },
-//     { q: "What is the Riddler's read identity?", a: "f" },
-//     { q: "Which of these individual never held the codename Robin?", a: "f" },
-//     { q: "In what year did Batman first appear?", a: "f" }
-//   ];
-
-//   // We start the game with a score of 0.
-//   var score = 0;
-
-//   // Loop over every question object
-//   for (var i = 0; i < questions.length; i++) {
-//     // Display current question to user and ask OK/Cancel
-//     var answer = confirm(questions[i].q);
-
-//     // Compare answers
-//     if ((answer === true && questions[i].a === "t") ||
-//       (answer === false && questions[i].a === "f")) {
-//       // Increase score
-//       score++;
-//       alert("Correct!");
-//     }
-//     else {
-//       alert("Wrong!");
-//     }
-//   }
-
-//   // Show total at end
-//   alert("You got " + score + "/" + questions.length);
 
 
 // ***************************ARRAY FOR READING THROUGH QUESTIONS**********************************
