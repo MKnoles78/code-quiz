@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <nav class="navbar navbar-light bg-light">
+            <span class="navbar-text">
+                <a href="#highscores">View Highscores</a>
+            </span>
+            <span id="time" style="color: black;"></span>
+        </nav>
+        <container id="heading">
+            <h2 id="quiz-heading" style="text-align: center;">Coding Quiz Challenge</h2>
+            <p id="question" style="text-align: center;">The Riddler has escaped Arkham Asylum and has hidden a bomb in Gotham.  Help Batman solve these riddles before the timer runs out.  Every wrong answer takes time away.  Good Luck
+            !</p>
+            <div style="text-align: center;">
+            <button id="btn btn-primary btn-lg">Submit</button>
+            </div> <br> 
+        </container>
+
+        <container id="questionblock" style="display: none;">
+            <p id="display-question"></p>
+            <button id="btn-a"><span id="choice-a"></span></button><br>
+            <button id="btn-b"><span id="choice-b"></span></button><br>
+            <button id="btn-c"><span id="choice-c"></span></button><br>
+            <button id="btn-d"><span id="choice-d"></span></button><br>   
+        <container>
+        
+
+        <!-- *******NEED TO FIX IT SO HIGHSCORES DOESN'T DISAPPEAR WHEN SUBMIT IS PRESSED********  -->
+        <container id ="highscores" style="display: block;">
+            <form id="highscore-form" method="POST">
+            <label for="highscore-text">Add a highscore:</label>
+            <input type="text" placeholder="Enter your Initials" name="highscore-text" id="highscore-text" />
+            </form>
+            <input id="go-back" class="btn btn-primary" type="goback" value="Go Back">
+            <input id ="clearhigh" class="btn btn-primary" type="clear" value="Clear Highscores">
+            
+            <p>highscore Count: <span id="highscore-count">0</span></p>
+            
+            <ol id="highscore-list"></ol>
+        </container>
+
+        
+        
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+                
+        <script src="script.js"></script>
+    </body>
+</html>
