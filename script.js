@@ -1,36 +1,36 @@
 // GIVEN I am taking a code quiz
+  
+// ****************************COUNTDOWN TIMER ELEMENT************************
+
 // WHEN I click the start button
 // THEN a timer starts and I am presented with a question
 // create a countdown time
-  
 
-// ****************************COUNTDOWN TIMER ELEMENT************************
-//added timer feature
+// these variables are for the timer element id tags 
 var timeEl = document.querySelector("#time");
 var startButtonEl = document.getElementById("btn btn-primary btn-lg")
 var mainEl = document.getElementById("main");
 var headingEl = document.getElementById("heading");
 var questionBlockEl = document.getElementById("questionblock")
 
-
-
+// this is the submit or start button that displays the quiz, and starts the timer 
 startButtonEl.addEventListener("click", function(){
    console.log ("you clicked me") 
     setTime()
     headingEl.style.display = "none";
     
     // this line changes display of the questionblock from none to block, hides and shows 
-    var x = document.getElementById("questionblock");
-    if (x.style.display === "none") {
-      x.style.display = "block";
+    var changeQuestion = document.getElementById("questionblock");
+    if (changeQuestion.style.display === "none") {
+      changeQuestion.style.display = "block";
     } else {
-      x.style.display = "none";
-    }
-
-
+      changeQuestion.style.display = "none";
+    }  
     
+    loadQuestions()
 });
 
+// this is when the timer begins countdown process
 var secondsLeft = 76;
 
 function setTime() {
@@ -46,10 +46,11 @@ function setTime() {
 
 }
 
-// link timer to start button
 
 
 // ********************************ONCLICK EVENT TO START QUESTIONS*****************************
+//assign variables elements to the ids
+
 var displayQuestionEl = document.getElementById("display-question");
 var choiceAEl= document.getElementById("choice-a");
 var choiceBEl= document.getElementById("choice-b");
@@ -97,63 +98,81 @@ var questions = [
 },
 ];
 
+//loop through questions and display them in the question block
+//every timer an options is selected question changes
+//notate when the last question occurs, which is the length - 1
 var lastQuestion = questions.length - 1;
-var score = 0;
 
+for (var i = 0; i < questions.length; i++) {
+  console.log("I love " + questions[i]);
+  //when for loop begins first set of questions load into block
+  //once a button is clicked the next set of questions display; etc.
+  //if the answer is correct proceed
+  //else if answer is wrong -15 secs from timer then proceed
 var questionOne = questions[0].displayQuestionEl;
 var questionTwo = questions[1].displayQuestionEl;
 var questionThree = questions[2].displayQuestionEl;
 var questionFour = questions[3].displayQuestionEl;
 var questionFive = questions[4].displayQuestionEl;
+// these variables establish where answer within index
 var optionOne = questions[0].choiceAEl
 var optionTwo = questions[1].choiceBEl
 var optionThree = questions[2].choiceCEl
 var optionFour = questions[3].choiceDEl
+}
+
+function loadQuestions(){
+ console.log("hello")
 
 
 
+  choiceAEl = buttonAEl.addEventListener("click", function(){
+    console.log ("you clicked a")} );
+  choiceBEl = buttonBEl.addEventListener("click", function(){
+    console.log ("you clicked b")} );
+  choiceCEl = buttonCEl.addEventListener("click", function(){
+    console.log ("you clicked c")} );
+  choiceDEl = buttonDEl.addEventListener("click", function(){
+    console.log ("you clicked d")} );
+
+}
+
+//assigns buttons to places within the HTML and add event listners
+buttonAEl = document.getElementById("btn-a");
+buttonBEl = document.getElementById("btn-b");
+buttonCEl = document.getElementById("btn-c");
+buttonDEl = document.getElementById("btn-d");
+//these element are used to display into corresponding boxes on HTML
 displayQuestionEl.innerHTML += questionOne
 choiceAEl.innerHTML += optionOne
 choiceBEl.innerHTML += optionTwo
 choiceCEl.innerHTML += optionThree
 choiceDEl.innerHTML += optionFour
 
-// onclick event for buttons 
 
-buttonAEl = document.getElementById("btn-a");
-buttonBEl = document.getElementById("btn-b");
-buttonCEl = document.getElementById("btn-c");
-buttonDEl = document.getElementById("btn-d");
+//assigns buttons to places within the HTML and add event listners
+// buttonAEl = document.getElementById("btn-a");
+// buttonBEl = document.getElementById("btn-b");
+// buttonCEl = document.getElementById("btn-c");
+// buttonDEl = document.getElementById("btn-d");
 
-buttonAEl.addEventListener("click", function(){
-  console.log ("you clicked a")} );
-buttonBEl.addEventListener("click", function(){
-  console.log ("you clicked b")} );
-buttonCEl.addEventListener("click", function(){
-  console.log ("you clicked c")} );
-buttonDEl.addEventListener("click", function(){
-  console.log ("you clicked d")} );
+// onclick event for buttons
+//these buttons need to trigger the correct answer 
+//these buttons need to trade out questions 
+//choices should correlate to buttons
+// choiceAEl = buttonAEl.addEventListener("click", function(){
+//   console.log ("you clicked a")} );
+// choiceBEl = buttonBEl.addEventListener("click", function(){
+//   console.log ("you clicked b")} );
+// choiceCEl = buttonCEl.addEventListener("click", function(){
+//   console.log ("you clicked c")} );
+// choiceDEl = buttonDEl.addEventListener("click", function(){
+//   console.log ("you clicked d")} );
 
-
-
-
-
-
-// function showQuestions (){
-// score++
-// for (i = 0; i < questions.length; i++) {
+ 
 
 
-  
-// }
-// }
-
-
-
-
-
-
-// *************************** 
+// ************************POSSIBLE EXERCISE TO UTILIZE TOGGLE FUNCTION *********************
 
 // var themeSwitcher = document.querySelector("#theme-switcher");
 // var container = document.querySelector(".container");
@@ -170,14 +189,9 @@ buttonDEl.addEventListener("click", function(){
 //   }
 // });
 
-// WHEN I answer a question
-// THEN I am presented with another question
-// WHEN I answer a question incorrectly
-// THEN time is subtracted from the clock
-// WHEN all questions are answered or the timer reaches 0
 
 
-// ***************************ARRAY FOR READING THROUGH QUESTIONS**********************************
+// ***************************POSSIBLE REFERENCE FOR ARRAY FOR READING THROUGH QUESTIONS**********************************
 
 
 // var poem = "Some say the world will end in 🔥, Some say in ice. From what I’ve tasted of desire, I hold with those who favor fire. But if it had to perish twice, I think I know enough of hate. To say that for destruction ice, Is also great, And would suffice.";
