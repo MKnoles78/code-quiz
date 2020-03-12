@@ -118,6 +118,24 @@ choiceBEl.innerHTML += optionTwo
 choiceCEl.innerHTML += optionThree
 choiceDEl.innerHTML += optionFour
 
+// onclick event for buttons 
+
+buttonAEl = document.getElementById("btn-a");
+buttonBEl = document.getElementById("btn-b");
+buttonCEl = document.getElementById("btn-c");
+buttonDEl = document.getElementById("btn-d");
+
+buttonAEl.addEventListener("click", function(){
+  console.log ("you clicked a")} );
+buttonBEl.addEventListener("click", function(){
+  console.log ("you clicked b")} );
+buttonCEl.addEventListener("click", function(){
+  console.log ("you clicked c")} );
+buttonDEl.addEventListener("click", function(){
+  console.log ("you clicked d")} );
+
+
+
 
 
 
@@ -483,4 +501,4 @@ highscoreList.addEventListener("click", function(event) {
 
 // THEN the game is over
 // WHEN the game is over
-// THEN I can save my initials and score 
+// THEN I can save my initials and
