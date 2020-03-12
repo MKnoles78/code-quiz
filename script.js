@@ -26,8 +26,8 @@ startButtonEl.addEventListener("click", function(){
     } else {
       changeQuestion.style.display = "none";
     }  
-    
-    loadQuestions()
+    loopOne ()
+    loadQuestionsOne()
 });
 
 // this is when the timer begins countdown process
@@ -121,21 +121,20 @@ var optionThree = questions[2].choiceCEl
 var optionFour = questions[3].choiceDEl
 }
 
-function loadQuestions(){
- console.log("hello")
-
-
+function loadQuestionsOne(){
 
   choiceAEl = buttonAEl.addEventListener("click", function(){
-    console.log ("you clicked a")} );
+    console.log ("you clicked a")});
   choiceBEl = buttonBEl.addEventListener("click", function(){
     console.log ("you clicked b")} );
   choiceCEl = buttonCEl.addEventListener("click", function(){
-    console.log ("you clicked c")} );
+    console.log ("you clicked c")});
   choiceDEl = buttonDEl.addEventListener("click", function(){
-    console.log ("you clicked d")} );
+    console.log ("you clicked d")});
+  }
 
-}
+
+
 
 //assigns buttons to places within the HTML and add event listners
 buttonAEl = document.getElementById("btn-a");
@@ -143,11 +142,21 @@ buttonBEl = document.getElementById("btn-b");
 buttonCEl = document.getElementById("btn-c");
 buttonDEl = document.getElementById("btn-d");
 //these element are used to display into corresponding boxes on HTML
+
+function loopOne (){
 displayQuestionEl.innerHTML += questionOne
 choiceAEl.innerHTML += optionOne
 choiceBEl.innerHTML += optionTwo
 choiceCEl.innerHTML += optionThree
-choiceDEl.innerHTML += optionFour
+choiceDEl.innerHTML += optionFour};
+
+function loopTwo (){
+  displayQuestionEl.innerHTML += questionTwo
+  choiceAEl.innerHTML += optionOne
+  choiceBEl.innerHTML += optionTwo
+  choiceCEl.innerHTML += optionThree
+  choiceDEl.innerHTML += optionFour
+  };
 
 
 //assigns buttons to places within the HTML and add event listners
